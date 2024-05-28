@@ -1,0 +1,134 @@
+{
+  "users": [
+    {
+      "last_name": "Doe",
+      "first_name": "John",
+      "email": "j.doe@example.com",
+      "id": 1
+    },
+    {
+      "last_name": "Adams",
+      "first_name": "Alice",
+      "email": "a.adams@example.com",
+      "id": 2
+    },
+    {
+      "last_name": "Brown",
+      "first_name": "Chris",
+      "email": "c.brown@example.com",
+      "id": 3
+    },
+    {
+      "last_name": "Clark",
+      "first_name": "Dana",
+      "email": "d.clark@example.com",
+      "id": 4
+    }
+  ],
+  "photos": [
+    {
+      "user_id": 1,
+      "file_name": "vacation1.jpg",
+      "traits": {
+        "blurriness": true,
+        "faces": true,
+        "subject_matter": "landscape",
+        "similarity_check": false,
+        "rating": 3
+      },
+      "action": "move_to:/archive",
+      "id": 1
+    },
+    {
+      "user_id": 1,
+      "file_name": "party1.jpg",
+      "traits": {
+        "blurriness": false,
+        "faces": true,
+        "subject_matter": "party",
+        "similarity_check": true,
+        "rating": 5
+      },
+      "action": "keep",
+      "id": 2
+    },
+    {
+      "user_id": 2,
+      "file_name": "conference1.jpg",
+      "traits": {
+        "blurriness": true,
+        "faces": false,
+        "subject_matter": "document",
+        "similarity_check": false,
+        "rating": 2
+      },
+      "action": "delete",
+      "id": 3
+    },
+    {
+      "user_id": 2,
+      "file_name": "wedding1.jpg",
+      "traits": {
+        "blurriness": false,
+        "faces": true,
+        "subject_matter": "event",
+        "similarity_check": true,
+        "rating": 4
+      },
+      "action": "move_to:/favorites",
+      "id": 4
+    },
+    {
+      "user_id": 3,
+      "file_name": "nature1.jpg",
+      "traits": {
+        "blurriness": false,
+        "faces": false,
+        "subject_matter": "nature",
+        "similarity_check": true,
+        "rating": 5
+      },
+      "action": "keep",
+      "id": 5
+    },
+    {
+      "user_id": 3,
+      "file_name": "selfie1.jpg",
+      "traits": {
+        "blurriness": true,
+        "faces": true,
+        "subject_matter": "selfie",
+        "similarity_check": false,
+        "rating": 2
+      },
+      "action": "delete",
+      "id": 6
+    },
+    {
+      "user_id": 4,
+      "file_name": "sports1.jpg",
+      "traits": {
+        "blurriness": false,
+        "faces": false,
+        "subject_matter": "sports",
+        "similarity_check": false,
+        "rating": 4
+      },
+      "action": "keep",
+      "id": 7
+    },
+    {
+      "user_id": 4,
+      "file_name": "family1.jpg",
+      "traits": {
+        "blurriness": true,
+        "faces": true,
+        "subject_matter": "family",
+        "similarity_check": true,
+        "rating": 3
+      },
+      "action": "move_to:/album",
+      "id": 8
+    }
+  ]
+}
