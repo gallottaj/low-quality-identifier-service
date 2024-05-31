@@ -31,12 +31,10 @@
       "email": "gen.jones@example.com"
     },
     {
-      "id": "ee43",
+      "last_name": "Jones",
       "first_name": "Genny",
-      "email": "gen.jones@example.com"
-    },
-    {
-      "id": "e7a7"
+      "email": "genny.jones@example.com",
+      "id": "ee43"
     }
   ],
   "photos": [
