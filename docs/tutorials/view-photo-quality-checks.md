@@ -46,7 +46,7 @@ To retrieve your user id:
         }
     ]
     ```
-## Retreive photos
+## See details of photos
 
 Viewing the results of all photo quality checks requires knowing the photo's id.
 
@@ -68,7 +68,9 @@ To retrieve the photos:
     Enter the user's id in the parameter value.
 
 1. In the Postman app, choose **Send** to make the request.
-1. Watch for the response body, which should look something like this. Note that the names should be the same as you used in your **Request body** and the response should include all the photo's that belong to the user.
+1. Watch for the response body, which should look something like this. The response body will show all photos that belong to the user. 
+
+Note the `trait` and `action` values to understand the results of the photo quality check.
 
     ```js
     [
