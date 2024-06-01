@@ -39,5 +39,5 @@ on the installation of the service.
 When running a local test, the `{base_url}` is
 generally `http://localhost:3000`.
 
-* [Users resource](api/users)
-* [Photos resource](api/photos)
+* [Users resource](api/reference-topics/users)
+* [Photos resource](api/reference-topics/photos)
