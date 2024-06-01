@@ -24,9 +24,9 @@ Before you begin, you must follow the prerequisite tutorial below. You only have
 
 After your system is ready, these tutorials show you how to perform common tasks.
 
-* [Enroll a new user](tutorials/enroll-a-new-user)
-* [Add a new photo](tutorials/add-a-new-photo)
-* [Tag a photo for cleanup](tutorials/tag-photo)
+* [Add a new user](tutorials/add-a-new-photo-tutorial)
+* [Add a new photo](tutorials/add-a-new-photo-tutorial)
+* [View photo quality check results](tutorials/view-photo-quality-checks)
 
 ## API reference docs
 
@@ -39,5 +39,5 @@ on the installation of the service.
 When running a local test, the `{base_url}` is
 generally `http://localhost:3000`.
 
-* [Users resource](api/reference-topics/users)
+* [Users resource](api/users)
 * [Photos resource](api/photos)
