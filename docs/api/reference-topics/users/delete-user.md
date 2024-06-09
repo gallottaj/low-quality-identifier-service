@@ -2,15 +2,15 @@
 layout: page
 ---
 
-# Update a user
+# Delete a user
 
-Use this operation to update a user resource. You need to retrieve the user's id for this operation. Refer to [Read one user](/read-one-user.md) to get the user id.
+Use this operation to delete a user resource. You need to retrieve the user's id for this operation. Refer to [Read one user](/read-one-user.md) to get the user id.
 
 ## URL
 
 ```shell
 
-{PUT} {base_url}/users/{id}
+{DELETE} {base_url}/users/{id}
 ```
 
 ## Params
