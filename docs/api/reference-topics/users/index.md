@@ -39,17 +39,17 @@ The `user` resource supports these operations.
 
 ### READ (GET)
 
-* [Get all users](users-get-all-users)
-* [Get users by ID](users-get-user-by-id)
+* [Get all users](get-all-users)
+* [Get users by ID](show-one-user)
 
 ### CREATE (POST)
 
-* [Create user](users-create-user)
+* [Create user](add-new-user)
 
 ### UPDATE (PUT)
 
-* [Update user by ID](users-update-by-id)
+* [Update user by ID](update-user)
 
 ### DELETE
 
-* [Delete user by ID](users-delete-user-by-id)
+* [Delete user by ID](delete-user)

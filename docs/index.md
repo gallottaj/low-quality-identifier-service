@@ -20,11 +20,11 @@ Learn how to do common tasks within the low-quality image identifier service.
 
 Before you begin, you must follow the prerequisite tutorial below. You only have to do this one time per development system.
 
-* [Getting started](tutorials/before-you-start-a-tutorial)
+* [Getting started](tutorials/before-you)
 
 After your system is ready, these tutorials show you how to perform common tasks.
 
-* [Add a new user](tutorials/add-a-new-photo-tutorial)
+* [Add a new user](tutorials/add-a-new-user-tutorial)
 * [Add a new photo](tutorials/add-a-new-photo-tutorial)
 * [View photo quality check results](tutorials/view-photo-quality-checks)
 

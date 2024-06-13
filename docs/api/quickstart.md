@@ -16,7 +16,7 @@ You’ll learn when and how to use the web service and get set up to make your f
 
 Photos will surface in the the low quality image identifier service when they are created in the database and assigned to users (by user {id}). If you’ve used the the low quality image identifier service previously, you’re already enrolled in the service and may have photos to work with.
 
-If not, you might need to set up your development system and get going from scratch. Don’t worry – you only have to do this one time per development system! Follow these [prerequisite steps](../tutorials/before-you-start-a-tutorial.md) to install the tools and test your development system.
+If not, you might need to set up your development system and get going from scratch. Don’t worry – you only have to do this one time per development system! Follow these [prerequisite steps](../tutorials/before-you-start.md) to install the tools and test your development system.
 
 ## When to use the the low quality image identifier service
 
@@ -55,7 +55,7 @@ Let’s test making this simple request to the [`photos`](photos) resource.  You
 curl http://localhost:3000/photos?user_id=1
 ```
 
-If the call was successful, the response you receive will be a list of photoss from the the low quality image identifier service such as you see in this example:
+If the call was successful, the response you receive will be a list of photos from the the low quality image identifier service such as you see in this example:
 
 ```js
 
