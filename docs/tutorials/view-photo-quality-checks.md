@@ -61,8 +61,10 @@ To retrieve the photos:
 
 1. Open the Postman app on your desktop.
 1. In the Postman app, create a new request with these values:
-    * **METHOD**: GET
-    * **URL**: `{{base_url}}/photos`
+
+    * **Method**: Get
+    * **Authorization**: Basic Auth (`username`/`password`)
+    * **URL**: `{base_url}/photos`
     * **Headers**:`Content-Type: application/json`
     * **Parameters**: `user_id`
     Enter the user's id in the parameter value.

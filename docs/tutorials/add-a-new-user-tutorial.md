@@ -28,8 +28,10 @@ To add a new user:
 
 1. Open the Postman app on your desktop.
 1. In the Postman app, create a new request with these values:
-    * **METHOD**: POST
-    * **URL**: `{{base_url}}/users`
+
+    * **Method**: POST
+    * **Authorization**: Basic Auth (`username`/`password`)
+    * **URL**: `{base_url}/photos`
     * **Headers**:`Content-Type: application/json`
     * **Request body**:
         You can change the values of each property as you'd like.

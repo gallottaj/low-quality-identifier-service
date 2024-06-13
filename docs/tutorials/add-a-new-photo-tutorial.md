@@ -28,27 +28,30 @@ To add a new photo:
 
 1. Open the Postman app on your desktop.
 1. In the Postman app, create a new request with these values:
-    * **METHOD**: POST
-    * **URL**: `{{base_url}}/photos`
+
+    * **Method**: POST
+    * **Authorization**: Basic Auth (`username`/`password`)
+    * **URL**: `{base_url}/photos`
     * **Headers**:`Content-Type: application/json`
     * **Request body**:
-        You can change the values of each property as you'd like.
+        
+    You can change the values of each property as you'd like.
 
-        ```js
-        [
-        {
-            "id": "aab5",
-            "file_name": "new_photo.jpg",
-            "traits": {
-                "blurriness": true,
-                "faces": true,
-                "subject_matter": "landscape",
-                "similarity_check": false,
-                "rating": 3
-            },
-            "action": "move_to:/archive"
-        }
-        ]
+    ```js
+    [
+    {
+        "id": "aab5",
+        "file_name": "new_photo.jpg",
+        "traits": {
+            "blurriness": true,
+            "faces": true,
+            "subject_matter": "landscape",
+            "similarity_check": false,
+            "rating": 3
+        },
+        "action": "move_to:/archive"
+    }
+    ]
         ```
 
 1. In the Postman app, choose **Send** to make the request.
