@@ -47,7 +47,7 @@ Sample `photo` resource
 | `action.id` | number | The user's unique record ID |
 
 
-## Operations
+<!-- ## Operations
 
 The `user` resource supports these operations.
 
@@ -66,4 +66,4 @@ The `user` resource supports these operations.
 
 ### DELETE
 
-* [Delete user by ID](users-delete-user-by-id)
+* [Delete user by ID](users-delete-user-by-id) -->
