@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 ---
 
 # Tutorial: Add a new photo

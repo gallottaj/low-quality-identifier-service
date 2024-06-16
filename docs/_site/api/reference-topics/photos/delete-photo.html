@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.3" />
 <meta property="og:locale" content="en_US" />
-<link rel="canonical" href="http://localhost:4000/api/reference-topics/users/update-user.html" />
-<meta property="og:url" content="http://localhost:4000/api/reference-topics/users/update-user.html" />
+<link rel="canonical" href="http://localhost:4000/api/reference-topics/photos/delete-photo.html" />
+<meta property="og:url" content="http://localhost:4000/api/reference-topics/photos/delete-photo.html" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","url":"http://localhost:4000/api/reference-topics/users/update-user.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","url":"http://localhost:4000/api/reference-topics/photos/delete-photo.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" /></head>
 <body><header class="site-header" role="banner">
@@ -40,14 +40,14 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <h1 id="update-a-user">Update a user</h1>
+    <h1 id="delete-a-photo">Delete a photo</h1>
 
-<p>Use this operation to update a user resource. You need to retrieve the user’s id for this operation. Refer to <a href="/read-one-user.md">Read one user</a> to get the user id.</p>
+<p>Use this operation to delete a photo resource. You need to retrieve the photo’s id for this operation. Refer to <a href="/show-one-photo.md">Show one photo</a> to get the photo id.</p>
 
 <h2 id="url">URL</h2>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-<span class="o">{</span>PUT<span class="o">}</span> <span class="o">{</span>base_url<span class="o">}</span>/users/<span class="o">{</span><span class="nb">id</span><span class="o">}</span>
+<span class="o">{</span>DELETE<span class="o">}</span> <span class="o">{</span>base_url<span class="o">}</span>/photos/<span class="o">{</span><span class="nb">id</span><span class="o">}</span>
 </code></pre></div></div>
 
 <h2 id="params">Params</h2>
@@ -64,7 +64,7 @@
     <tr>
       <td><code class="language-plaintext highlighter-rouge">id</code></td>
       <td>String</td>
-      <td>The unique identifier of the user</td>
+      <td>The unique identifier of the photo</td>
     </tr>
   </tbody>
 </table>
@@ -107,12 +107,18 @@
 <p>The following example shows the response.</p>
 
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span>
-    <span class="p">{</span>
-      <span class="dl">"</span><span class="s2">last_name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Doe</span><span class="dl">"</span><span class="p">,</span>
-      <span class="dl">"</span><span class="s2">first_name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">John</span><span class="dl">"</span><span class="p">,</span>
-      <span class="dl">"</span><span class="s2">email</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">j.doe@example.com</span><span class="dl">"</span><span class="p">,</span>
-      <span class="dl">"</span><span class="s2">id</span><span class="dl">"</span><span class="p">:</span> <span class="mi">1</span>
-    <span class="p">}</span>
+  <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">file_name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">new_photo.jpg</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">traits</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="dl">"</span><span class="s2">blurriness</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="dl">"</span><span class="s2">faces</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="dl">"</span><span class="s2">subject_matter</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">landscape</span><span class="dl">"</span><span class="p">,</span>
+        <span class="dl">"</span><span class="s2">similarity_check</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="dl">"</span><span class="s2">rating</span><span class="dl">"</span><span class="p">:</span> <span class="mi">3</span>
+    <span class="p">},</span>
+    <span class="dl">"</span><span class="s2">action</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">move_to:/archive</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">id</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">aab5</span><span class="dl">"</span>
+  <span class="p">}</span>
 <span class="p">]</span>
 </code></pre></div></div>
 
@@ -145,7 +151,7 @@
   </tbody>
 </table>
 
-  </div><a class="u-url" href="/api/reference-topics/users/update-user.html" hidden></a>
+  </div><a class="u-url" href="/api/reference-topics/photos/delete-photo.html" hidden></a>
 </article>
 
       </div>

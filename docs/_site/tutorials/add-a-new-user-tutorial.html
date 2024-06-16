@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.3" />
 <meta property="og:locale" content="en_US" />
-<link rel="canonical" href="http://localhost:4000/tutorials/add-a-new-photo-tutorial.html" />
-<meta property="og:url" content="http://localhost:4000/tutorials/add-a-new-photo-tutorial.html" />
+<link rel="canonical" href="http://localhost:4000/tutorials/add-a-new-user-tutorial.html" />
+<meta property="og:url" content="http://localhost:4000/tutorials/add-a-new-user-tutorial.html" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","url":"http://localhost:4000/tutorials/add-a-new-photo-tutorial.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","url":"http://localhost:4000/tutorials/add-a-new-user-tutorial.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" /></head>
 <body><header class="site-header" role="banner">
@@ -40,10 +40,10 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <h1 id="tutorial-add-a-new-photo">Tutorial: Add a new photo</h1>
+    <h1 id="tutorial-add-a-new-user">Tutorial: Add a new user</h1>
 
 <p>In this tutorial, you learn the operations needed to
-add a new photo.</p>
+add a new user.</p>
 
 <p>Expect this tutorial to take about 15 minutes to complete.</p>
 
@@ -51,11 +51,11 @@ add a new photo.</p>
 
 <p>Make sure you’ve completed the <a href="before-you-start-a-tutorial">Before you start a tutorial</a> topic on the development system you’ll use for the tutorial.</p>
 
-<h2 id="add-a-new-photo">Add a new photo</h2>
+<h2 id="add-a-new-user">Add a new user</h2>
 
-<p>Adding a new photo to the service requires that you add (<code class="language-plaintext highlighter-rouge">POST</code>) the details of a new <a href="../api/photo"><code class="language-plaintext highlighter-rouge">photo</code></a> resource to the service.</p>
+<p>Adding a new user to the service requires that you add (<code class="language-plaintext highlighter-rouge">POST</code>) the details of a new <a href="../api/user"><code class="language-plaintext highlighter-rouge">user</code></a> resource to the service.</p>
 
-<p>To add a new photo:</p>
+<p>To add a new user:</p>
 
 <ol>
   <li>
@@ -74,45 +74,32 @@ add a new photo.</p>
       <li><strong>Authorization</strong>: Basic Auth (<code class="language-plaintext highlighter-rouge">username</code>/<code class="language-plaintext highlighter-rouge">password</code>)</li>
       <li><strong>URL</strong>: <code class="language-plaintext highlighter-rouge">{base_url}/photos</code></li>
       <li><strong>Headers</strong>:<code class="language-plaintext highlighter-rouge">Content-Type: application/json</code></li>
-      <li><strong>Request body</strong>:</li>
+      <li>
+        <p><strong>Request body</strong>:
+  You can change the values of each property as you’d like.</p>
+
+        <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="p">[</span>
+      <span class="p">{</span>
+      <span class="dl">"</span><span class="s2">last_name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Doe</span><span class="dl">"</span><span class="p">,</span>
+      <span class="dl">"</span><span class="s2">first_name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">John</span><span class="dl">"</span><span class="p">,</span>
+      <span class="dl">"</span><span class="s2">email</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">j.doe@example.com</span><span class="dl">"</span><span class="p">,</span>
+      <span class="p">}</span>
+  <span class="p">]</span>
+</code></pre></div>        </div>
+      </li>
     </ul>
-
-    <p>You can change the values of each property as you’d like.</p>
-
-    <p><code class="language-plaintext highlighter-rouge">js
- [
- {
-     "id": "aab5",
-     "file_name": "new_photo.jpg",
-     "traits": {
-         "blurriness": true,
-         "faces": true,
-         "subject_matter": "landscape",
-         "similarity_check": false,
-         "rating": 3
-     },
-     "action": "move_to:/archive"
- }
- ]
-    </code></p>
   </li>
   <li>In the Postman app, choose <strong>Send</strong> to make the request.</li>
   <li>
-    <p>Watch for the response body, which should look something like this. Note that the names should be the same as you used in your <strong>Request body</strong> and the response should include the new photo’s <code class="language-plaintext highlighter-rouge">id</code>.</p>
+    <p>Watch for the response body, which should look something like this. Note that the names should be the same as you used in your <strong>Request body</strong> and the response should include the new user’s <code class="language-plaintext highlighter-rouge">id</code>.</p>
 
     <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="p">[</span>
- <span class="p">{</span>
-     <span class="dl">"</span><span class="s2">id</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">aab5</span><span class="dl">"</span><span class="p">,</span>
-     <span class="dl">"</span><span class="s2">file_name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">new_photo.jpg</span><span class="dl">"</span><span class="p">,</span>
-     <span class="dl">"</span><span class="s2">traits</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
-         <span class="dl">"</span><span class="s2">blurriness</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-         <span class="dl">"</span><span class="s2">faces</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-         <span class="dl">"</span><span class="s2">subject_matter</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">landscape</span><span class="dl">"</span><span class="p">,</span>
-         <span class="dl">"</span><span class="s2">similarity_check</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-         <span class="dl">"</span><span class="s2">rating</span><span class="dl">"</span><span class="p">:</span> <span class="mi">3</span>
-     <span class="p">},</span>
-     <span class="dl">"</span><span class="s2">action</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">move_to:/archive</span><span class="dl">"</span>
- <span class="p">}</span>
+     <span class="p">{</span>
+     <span class="dl">"</span><span class="s2">last_name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Doe</span><span class="dl">"</span><span class="p">,</span>
+     <span class="dl">"</span><span class="s2">first_name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">John</span><span class="dl">"</span><span class="p">,</span>
+     <span class="dl">"</span><span class="s2">email</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">j.doe@example.com</span><span class="dl">"</span><span class="p">,</span>
+     <span class="dl">"</span><span class="s2">id</span><span class="dl">"</span><span class="p">:</span> <span class="mi">1</span>
+     <span class="p">}</span>
  <span class="p">]</span>
 </code></pre></div>    </div>
   </li>
@@ -123,7 +110,7 @@ your favorite programming language. To do this, adapt the values from
 the tutorial to the properties and arguments that the language uses to
 make REST API calls.</p>
 
-  </div><a class="u-url" href="/tutorials/add-a-new-photo-tutorial.html" hidden></a>
+  </div><a class="u-url" href="/tutorials/add-a-new-user-tutorial.html" hidden></a>
 </article>
 
       </div>

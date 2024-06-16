@@ -1,4 +1,6 @@
-
+---
+layout: post
+---
 
 # Delete a user
 

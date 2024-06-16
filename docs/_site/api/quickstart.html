@@ -25,7 +25,7 @@
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/api/reference-topics/users/">User resource</a></div>
+        <div class="trigger"><a class="page-link" href="/">Home</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -42,37 +42,37 @@
   <div class="post-content e-content" itemprop="articleBody">
     <h1 id="quickstart-guide">Quickstart guide</h1>
 
-<p>The low-quality image identifier service provides a cloud-hosted photo gallery which allows you to identify low quality images to mark and sort them for cleanup.</p>
+<p>The low-quality identifier service provides a cloud-hosted photo gallery which allows you to identify low quality images to mark and sort them for cleanup.</p>
 
 <h2 id="at-a-glance">At a glance</h2>
 
-<p>This Quickstart provides all the information you need to begin using the low quality image identifier to sort photos for cleanup.</p>
+<p>This Quickstart provides all the information you need to begin using the low quality identifier to sort photos for cleanup.</p>
 
 <p>You’ll learn when and how to use the web service and get set up to make your first call to the API.</p>
 
-<h2 id="setting-up-the-the-low-quality-image-identifier-service">Setting up the the low quality image identifier service</h2>
+<h2 id="setting-up-the-the-low-quality-identifier-service">Setting up the the low quality identifier service</h2>
 
-<p>Photos will surface in the the low quality image identifier service when they are created in the database and assigned to users (by user {id}). If you’ve used the the low quality image identifier service previously, you’re already enrolled in the service and may have photos to work with.</p>
+<p>Photos will surface in the the low quality identifier service when they are created in the database and assigned to users (by user {id}). If you’ve used the the low quality identifier service previously, you’re already enrolled in the service and may have photos to work with.</p>
 
 <p>If not, you might need to set up your development system and get going from scratch. Don’t worry – you only have to do this one time per development system! Follow these <a href="../tutorials/before-you-start.md">prerequisite steps</a> to install the tools and test your development system.</p>
 
-<h2 id="when-to-use-the-the-low-quality-image-identifier-service">When to use the the low quality image identifier service</h2>
+<h2 id="when-to-use-the-the-low-quality-identifier-service">When to use the the low quality identifier service</h2>
 
-<p>The the low quality image identifier service REST API offers a wide range of integration possibilities, from sorting photos in bulk for cleanup.</p>
+<p>The the low quality identifier service REST API offers a wide range of integration possibilities, from sorting photos in bulk for cleanup.</p>
 
-<p>The service comprises two resources: <a href="users"><code class="language-plaintext highlighter-rouge">users</code></a> and <a href="photos"><code class="language-plaintext highlighter-rouge">photos</code></a>. The <a href="users"><code class="language-plaintext highlighter-rouge">users</code></a> resource (containing the subscribers to the service) works in synergy with the <a href="photos"><code class="language-plaintext highlighter-rouge">photos</code></a> resource (containing the photoss) to align users with their the low quality image identifier list.</p>
+<p>The service comprises two resources: <a href="users"><code class="language-plaintext highlighter-rouge">users</code></a> and <a href="photos"><code class="language-plaintext highlighter-rouge">photos</code></a>. The <a href="users"><code class="language-plaintext highlighter-rouge">users</code></a> resource (containing the subscribers to the service) works in synergy with the <a href="photos"><code class="language-plaintext highlighter-rouge">photos</code></a> resource (containing the photoss) to align users with their the low quality identifier list.</p>
 
 <p>Using this cloud-based service, customers can register themselves to create and manage their own photoss.
 When they’re registered, customers can update and delete photoss to suit their needs. Adding photoss on customers’ behalf is easy - if they’re collaborating with colleagues on different teams and projects, for example, they might be delegated requests and assigned photoss from different sources.</p>
 
-<h2 id="how-to-use-the-the-low-quality-image-identifier-service">How to use the the low quality image identifier service</h2>
+<h2 id="how-to-use-the-the-low-quality-identifier-service">How to use the the low quality identifier service</h2>
 
 <p>To build your API call, you must have the following components:</p>
 
 <ul>
-  <li><strong>A host.</strong>  The {base_url} depends on users’ installation of the service in their development environment. For v1 of the low quality image identifier Service API, the <strong>base_url</strong> variable is typically set to <code class="language-plaintext highlighter-rouge">http://localhost:3000</code>.</li>
-  <li><strong>Authorization.</strong>  For v1 of the the low quality image identifier service, requests do not use any authorization. All endpoints are available to all users and applications.</li>
-  <li><strong>A request.</strong>  The the low quality image identifier service REST API enables CRUD operations via HTTP requests on database resources (<code class="language-plaintext highlighter-rouge">GET</code>, <code class="language-plaintext highlighter-rouge">POST</code>, <code class="language-plaintext highlighter-rouge">PUT</code>, <code class="language-plaintext highlighter-rouge">PATCH</code>, and <code class="language-plaintext highlighter-rouge">DELETE</code> methods). Request and response bodies are encoded as JSON.</li>
+  <li><strong>A host.</strong>  The {base_url} depends on users’ installation of the service in their development environment. For v1 of the low quality identifier Service API, the <strong>base_url</strong> variable is typically set to <code class="language-plaintext highlighter-rouge">http://localhost:3000</code>.</li>
+  <li><strong>Authorization.</strong>  For v1 of the the low quality identifier service, requests do not use any authorization. All endpoints are available to all users and applications.</li>
+  <li><strong>A request.</strong>  The the low quality identifier service REST API enables CRUD operations via HTTP requests on database resources (<code class="language-plaintext highlighter-rouge">GET</code>, <code class="language-plaintext highlighter-rouge">POST</code>, <code class="language-plaintext highlighter-rouge">PUT</code>, <code class="language-plaintext highlighter-rouge">PATCH</code>, and <code class="language-plaintext highlighter-rouge">DELETE</code> methods). Request and response bodies are encoded as JSON.</li>
 </ul>
 
 <h3 id="supported-endpoints">Supported endpoints</h3>
@@ -106,7 +106,7 @@ When they’re registered, customers can update and delete photoss to suit their
 
 <h2 id="make-your-first-api-call--get-user-id">Make your first API call – <em>Get user id</em></h2>
 
-<p>Assume that you’re already enrolled in the the low quality image identifier service and you want to list all photoss as a first call to the API.</p>
+<p>Assume that you’re already enrolled in the the low quality identifier service and you want to list all photoss as a first call to the API.</p>
 
 <p>Let’s test making this simple request to the <a href="photos"><code class="language-plaintext highlighter-rouge">photos</code></a> resource.  You’ll use cURL to make the API call.</p>
 
@@ -114,7 +114,7 @@ When they’re registered, customers can update and delete photoss to suit their
 curl http://localhost:3000/photos?user_id<span class="o">=</span>1
 </code></pre></div></div>
 
-<p>If the call was successful, the response you receive will be a list of photos from the the low quality image identifier service such as you see in this example:</p>
+<p>If the call was successful, the response you receive will be a list of photos from the the low quality identifier service such as you see in this example:</p>
 
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
     <span class="p">[</span>
@@ -157,7 +157,7 @@ cURL comes installed by default on Mac operating systems. If you need to, instal
 
 <h2 id="next-steps">Next steps</h2>
 
-<p>Now that you’ve everything set up correctly, you’re good to go and can take full advantage of the the low quality image identifier service API! Go ahead and start posting new photoss or enrolling new users. You’ll see how easy the API is to use.</p>
+<p>Now that you’ve everything set up correctly, you’re good to go and can take full advantage of the the low quality identifier service API! Go ahead and start posting new photoss or enrolling new users. You’ll see how easy the API is to use.</p>
 
 <p>If you need more guidance, the Tutorials section of the API documentation walks through any photos you’ll want to do. The finer details of the supported resources, endpoints and properties are in the API reference section. For more information, go <a href="../index.md">here</a>.</p>
 

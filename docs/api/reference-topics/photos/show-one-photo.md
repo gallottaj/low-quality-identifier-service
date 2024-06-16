@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 ---
 
 # Show photo by id

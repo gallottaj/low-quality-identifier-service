@@ -1,4 +1,6 @@
-
+---
+layout: post
+---
 
 # Get all users
 

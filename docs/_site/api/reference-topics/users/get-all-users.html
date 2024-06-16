@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.3" />
 <meta property="og:locale" content="en_US" />
-<link rel="canonical" href="http://localhost:4000/api/reference-topics/users/update-user.html" />
-<meta property="og:url" content="http://localhost:4000/api/reference-topics/users/update-user.html" />
+<link rel="canonical" href="http://localhost:4000/api/reference-topics/users/get-all-users.html" />
+<meta property="og:url" content="http://localhost:4000/api/reference-topics/users/get-all-users.html" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","url":"http://localhost:4000/api/reference-topics/users/update-user.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","url":"http://localhost:4000/api/reference-topics/users/get-all-users.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" /></head>
 <body><header class="site-header" role="banner">
@@ -40,38 +40,19 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <h1 id="update-a-user">Update a user</h1>
+    <h1 id="get-all-users">Get all users</h1>
 
-<p>Use this operation to update a user resource. You need to retrieve the user’s id for this operation. Refer to <a href="/read-one-user.md">Read one user</a> to get the user id.</p>
+<p>Returns all users of the service.</p>
 
 <h2 id="url">URL</h2>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-<span class="o">{</span>PUT<span class="o">}</span> <span class="o">{</span>base_url<span class="o">}</span>/users/<span class="o">{</span><span class="nb">id</span><span class="o">}</span>
+<span class="o">{</span>GET<span class="o">}</span> <span class="o">{</span>base_url<span class="o">}</span>/users
 </code></pre></div></div>
 
-<h2 id="params">Params</h2>
-
-<table>
-  <thead>
-    <tr>
-      <th>Parameter name</th>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">id</code></td>
-      <td>String</td>
-      <td>The unique identifier of the user</td>
-    </tr>
-  </tbody>
-</table>
+<!-- ## Authorization -->
 
 <h2 id="request-headers">Request headers</h2>
-
-<p>This request does not use any authorization. The endpoint is available to all tasks and applications.</p>
 
 <table>
   <thead>
@@ -98,22 +79,25 @@
   </tbody>
 </table>
 
-<h2 id="request-body">Request body</h2>
-
-<p>None</p>
-
 <h2 id="return-body">Return body</h2>
 
 <p>The following example shows the response.</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span>
-    <span class="p">{</span>
-      <span class="dl">"</span><span class="s2">last_name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Doe</span><span class="dl">"</span><span class="p">,</span>
-      <span class="dl">"</span><span class="s2">first_name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">John</span><span class="dl">"</span><span class="p">,</span>
-      <span class="dl">"</span><span class="s2">email</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">j.doe@example.com</span><span class="dl">"</span><span class="p">,</span>
-      <span class="dl">"</span><span class="s2">id</span><span class="dl">"</span><span class="p">:</span> <span class="mi">1</span>
-    <span class="p">}</span>
-<span class="p">]</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```js
+[
+    {
+        "last_name": "Smith",
+        "first_name": "Ferdinand",
+        "email": "f.smith@example.com",
+        "id": 1
+    },
+    {
+        "last_name": "Jones",
+        "first_name": "Jill",
+        "email": "j.jones@example.com",
+        "id": 2
+    }
+```
 </code></pre></div></div>
 
 <h2 id="return-status">Return status</h2>
@@ -145,7 +129,7 @@
   </tbody>
 </table>
 
-  </div><a class="u-url" href="/api/reference-topics/users/update-user.html" hidden></a>
+  </div><a class="u-url" href="/api/reference-topics/users/get-all-users.html" hidden></a>
 </article>
 
       </div>

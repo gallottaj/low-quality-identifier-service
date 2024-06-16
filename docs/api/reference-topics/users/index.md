@@ -1,6 +1,5 @@
 ---
-layout: page
-title: User resource
+layout: post
 ---
 
 Base endpoint:

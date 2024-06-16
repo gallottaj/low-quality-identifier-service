@@ -1,8 +1,10 @@
-
+---
+layout: post
+---
 
 # Before you start a tutorial
 
-These are the steps you must do before you can run the tutorials for **the low-quality image identifier service**.
+These are the steps you must do before you can run the tutorials for **the low-quality identifier service**.
 
 Expect this preparation to take about 20 minutes to complete.
 
@@ -18,27 +20,27 @@ long-term support (LTS version of the operating system).
 * The following software on your development system:
     * [Git](https://docs.github.com/en/get-started/quickstart/set-up-git) (for the command line)
     * [GitHub Desktop](https://desktop.github.com) (optional)
-    * A fork of the [the low-quality image identifier service repo](https://github.com/UWC2-APIDOC/the low-quality image identifier service-public)
+    * A fork of the [the low-quality identifier service repo](https://github.com/UWC2-APIDOC/the low-quality identifier service-public)
     * A current/LTS version of [node.js](https://nodejs.org/en/)
     * A current version of [json-server](https://www.npmjs.com/package/json-server)
     * A current copy of the database file. You can get this by syncing your fork.
     * **TIP**: If you're using a fork of the repo, create a working branch in which to do your tutorials. Create a new branch for each tutorial to prevent a mistake in one from affecting your work in another.
-    * The [Postman desktop app](https://www.postman.com/downloads/). Because you run the **the low-quality image identifier service service** on your development system with an `http://localhost` hostname, the web-version of Postman can't perform the exercises.
+    * The [Postman desktop app](https://www.postman.com/downloads/). Because you run the **the low-quality identifier service service** on your development system with an `http://localhost` hostname, the web-version of Postman can't perform the exercises.
 
 ## Test your development system
 
 To test your development system, follow these steps:
 
-1. Create and checkout a test branch of your fork of the the low-quality image identifier service repo. Your `GitHub repo workspace` is the directory that contains your fork of the `the low-quality image identifier service` repo.
+1. Create and checkout a test branch of your fork of the the low-quality identifier service repo. Your `GitHub repo workspace` is the directory that contains your fork of the `the low-quality identifier service` repo.
 
     ```shell
     cd <your GitHub repo workspace>
     ls
-    # (see the the low-quality image identifier service directory in the list)
-    cd the low-quality image identifier service
+    # (see the the low-quality identifier service directory in the list)
+    cd the low-quality identifier service
     git checkout -b tutorial-test
     cd api
-    json-server -w the low-quality image identifier service db-source.json
+    json-server -w the low-quality identifier service db-source.json
     ```
 
     If your development system is installed correctly, you should see

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/tutorials/before-you-start.html" />
+<meta property="og:url" content="http://localhost:4000/tutorials/before-you-start.html" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","url":"http://localhost:4000/tutorials/before-you-start.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/"></a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/">Home</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline"></h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="" itemprop="datePublished">
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h1 id="before-you-start-a-tutorial">Before you start a tutorial</h1>
+
+<p>These are the steps you must do before you can run the tutorials for <strong>the low-quality identifier service</strong>.</p>
+
+<p>Expect this preparation to take about 20 minutes to complete.</p>
+
+<h2 id="preparing-for-the-tutorials">Preparing for the tutorials</h2>
+
+<p>The following instructions describe how to prepare for running the tutorials on Windows. For information about how to prepare MacOS for the tutorials, visit the <a href="macos-installation">MacOS installation guide</a>.</p>
+
+<h3 id="to-complete-the-tutorials-in-this-section-you-need-the-following">To complete the tutorials in this section, you need the following:</h3>
+
+<ul>
+  <li>A <a href="https://github.com">GitHub account</a></li>
+  <li>A development system (PC, Mac, or Linux) running a current or
+long-term support (LTS version of the operating system).</li>
+  <li>The following software on your development system:
+    <ul>
+      <li><a href="https://docs.github.com/en/get-started/quickstart/set-up-git">Git</a> (for the command line)</li>
+      <li><a href="https://desktop.github.com">GitHub Desktop</a> (optional)</li>
+      <li>A fork of the <a href="https://github.com/UWC2-APIDOC/the low-quality identifier service-public">the low-quality identifier service repo</a></li>
+      <li>A current/LTS version of <a href="https://nodejs.org/en/">node.js</a></li>
+      <li>A current version of <a href="https://www.npmjs.com/package/json-server">json-server</a></li>
+      <li>A current copy of the database file. You can get this by syncing your fork.</li>
+      <li><strong>TIP</strong>: If you’re using a fork of the repo, create a working branch in which to do your tutorials. Create a new branch for each tutorial to prevent a mistake in one from affecting your work in another.</li>
+      <li>The <a href="https://www.postman.com/downloads/">Postman desktop app</a>. Because you run the <strong>the low-quality identifier service service</strong> on your development system with an <code class="language-plaintext highlighter-rouge">http://localhost</code> hostname, the web-version of Postman can’t perform the exercises.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="test-your-development-system">Test your development system</h2>
+
+<p>To test your development system, follow these steps:</p>
+
+<ol>
+  <li>
+    <p>Create and checkout a test branch of your fork of the the low-quality identifier service repo. Your <code class="language-plaintext highlighter-rouge">GitHub repo workspace</code> is the directory that contains your fork of the <code class="language-plaintext highlighter-rouge">the low-quality identifier service</code> repo.</p>
+
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">cd</span> &lt;your GitHub repo workspace&gt;
+ <span class="nb">ls</span>
+ <span class="c"># (see the the low-quality identifier service directory in the list)</span>
+ <span class="nb">cd </span>the low-quality identifier service
+ git checkout <span class="nt">-b</span> tutorial-test
+ <span class="nb">cd </span>api
+ json-server <span class="nt">-w</span> the low-quality identifier service db-source.json
+</code></pre></div>    </div>
+
+    <p>If your development system is installed correctly, you should see
+ the service start and display the URL of the service: <code class="language-plaintext highlighter-rouge">http://localhost:3000</code>.</p>
+  </li>
+  <li>
+    <p>Make a test call to the service.</p>
+
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code> curl http://localhost:3000/users
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>If the service is running correctly, you should see a list of users from the service, such as in this example.</p>
+
+    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="p">[</span>
+     <span class="p">{</span>
+         <span class="dl">"</span><span class="s2">last_name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Smith</span><span class="dl">"</span><span class="p">,</span>
+         <span class="dl">"</span><span class="s2">first_name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Ferdinand</span><span class="dl">"</span><span class="p">,</span>
+         <span class="dl">"</span><span class="s2">email</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">f.smith@example.com</span><span class="dl">"</span><span class="p">,</span>
+         <span class="dl">"</span><span class="s2">id</span><span class="dl">"</span><span class="p">:</span> <span class="mi">1</span>
+     <span class="p">},</span>
+     <span class="p">{</span>
+         <span class="dl">"</span><span class="s2">last_name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Jones</span><span class="dl">"</span><span class="p">,</span>
+         <span class="dl">"</span><span class="s2">first_name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Jill</span><span class="dl">"</span><span class="p">,</span>
+         <span class="dl">"</span><span class="s2">email</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">j.jones@example.com</span><span class="dl">"</span><span class="p">,</span>
+         <span class="dl">"</span><span class="s2">id</span><span class="dl">"</span><span class="p">:</span> <span class="mi">2</span>
+     <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>If you don’t see the list of users, or receive an error in any step
+of the procedure, investigate and correct the error before continuing.
+Some common situations that cause errors include:</p>
+
+<ol>
+  <li>You mistyped a command.</li>
+  <li>You aren’t in the correct directory.</li>
+  <li>A required software component didn’t install correctly.</li>
+  <li>A required software component isn’t up to date.</li>
+</ol>
+
+<p>If you see the list of users from the service, you’re ready to do
+the tutorials.</p>
+
+  </div><a class="u-url" href="/tutorials/before-you-start.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading"></h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name"></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

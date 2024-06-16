@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.3" />
 <meta property="og:locale" content="en_US" />
-<link rel="canonical" href="http://localhost:4000/api/reference-topics/photos/show-one-photo.html" />
-<meta property="og:url" content="http://localhost:4000/api/reference-topics/photos/show-one-photo.html" />
+<link rel="canonical" href="http://localhost:4000/api/reference-topics/photos/add-new-photo.html" />
+<meta property="og:url" content="http://localhost:4000/api/reference-topics/photos/add-new-photo.html" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","url":"http://localhost:4000/api/reference-topics/photos/show-one-photo.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","url":"http://localhost:4000/api/reference-topics/photos/add-new-photo.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" /></head>
 <body><header class="site-header" role="banner">
@@ -40,14 +40,14 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <h1 id="show-photo-by-id">Show photo by id</h1>
+    <h1 id="add-a-new-photo">Add a new photo</h1>
 
-<p>Returns a single photo resource.</p>
+<p>Use this operation to create a new photo resource.</p>
 
 <h2 id="url">URL</h2>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-<span class="o">{</span>GET<span class="o">}</span> <span class="o">{</span>base_url<span class="o">}</span>/photos/<span class="o">{</span><span class="nb">id</span><span class="o">}</span>
+<span class="o">{</span>POST<span class="o">}</span> <span class="o">{</span>base_url<span class="o">}</span>/photos
 </code></pre></div></div>
 
 <h2 id="params">Params</h2>
@@ -62,9 +62,39 @@
   </thead>
   <tbody>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">id</code></td>
+      <td><code class="language-plaintext highlighter-rouge">file_name</code></td>
       <td>String</td>
-      <td>The unique identifier of the photo</td>
+      <td>The name of the photo file</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">traits.blurriness</code></td>
+      <td>Boolean</td>
+      <td>Indicates if the photo is blurry</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">traits.faces</code></td>
+      <td>Boolean</td>
+      <td>Indicates if the photo contains faces</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">traits.subject_matter</code></td>
+      <td>String</td>
+      <td>Description of the subject of the photo</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">traits.similarity_check</code></td>
+      <td>Boolean</td>
+      <td>Indicates the similiary of the photo</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">traits.rating</code></td>
+      <td>Number</td>
+      <td>Quality rating of the photo</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">action</code></td>
+      <td>String</td>
+      <td>Specifies the action to take on the photo</td>
     </tr>
   </tbody>
 </table>
@@ -100,24 +130,37 @@
 
 <h2 id="request-body">Request body</h2>
 
-<p>None</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span>
+    <span class="p">{</span>
+      <span class="dl">"</span><span class="s2">file_name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">new_photo.jpg</span><span class="dl">"</span><span class="p">,</span>
+      <span class="dl">"</span><span class="s2">traits</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="dl">"</span><span class="s2">blurriness</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="dl">"</span><span class="s2">faces</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="dl">"</span><span class="s2">subject_matter</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">landscape</span><span class="dl">"</span><span class="p">,</span>
+        <span class="dl">"</span><span class="s2">similarity_check</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="dl">"</span><span class="s2">rating</span><span class="dl">"</span><span class="p">:</span> <span class="mi">3</span>
+      <span class="p">},</span>
+      <span class="dl">"</span><span class="s2">action</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">move_to:/archive</span><span class="dl">"</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div></div>
 
-<h2 id="return-body">Return body</h2>
+<h2 id="response-body">Response body</h2>
 
 <p>The following example shows the response.</p>
 
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span>
   <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">id</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">aab5</span><span class="dl">"</span><span class="p">,</span>
     <span class="dl">"</span><span class="s2">file_name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">new_photo.jpg</span><span class="dl">"</span><span class="p">,</span>
     <span class="dl">"</span><span class="s2">traits</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
-        <span class="dl">"</span><span class="s2">blurriness</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-        <span class="dl">"</span><span class="s2">faces</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="dl">"</span><span class="s2">blurriness</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="dl">"</span><span class="s2">faces</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
         <span class="dl">"</span><span class="s2">subject_matter</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">landscape</span><span class="dl">"</span><span class="p">,</span>
         <span class="dl">"</span><span class="s2">similarity_check</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
         <span class="dl">"</span><span class="s2">rating</span><span class="dl">"</span><span class="p">:</span> <span class="mi">3</span>
     <span class="p">},</span>
-    <span class="dl">"</span><span class="s2">action</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">move_to:/archive</span><span class="dl">"</span><span class="p">,</span>
-    <span class="dl">"</span><span class="s2">id</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">aab5</span><span class="dl">"</span>
+    <span class="dl">"</span><span class="s2">action</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">move_to:/archive</span><span class="dl">"</span>
   <span class="p">}</span>
 <span class="p">]</span>
 </code></pre></div></div>
@@ -134,9 +177,9 @@
   </thead>
   <tbody>
     <tr>
-      <td>200</td>
-      <td>Success</td>
-      <td>Requested data returned successfully</td>
+      <td>201</td>
+      <td>Created</td>
+      <td>The request has been fulfilled and resulted in a new resource being created.</td>
     </tr>
     <tr>
       <td>404</td>
@@ -151,7 +194,7 @@
   </tbody>
 </table>
 
-  </div><a class="u-url" href="/api/reference-topics/photos/show-one-photo.html" hidden></a>
+  </div><a class="u-url" href="/api/reference-topics/photos/add-new-photo.html" hidden></a>
 </article>
 
       </div>

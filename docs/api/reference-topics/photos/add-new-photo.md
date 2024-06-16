@@ -1,4 +1,6 @@
-
+---
+layout: post
+---
 
 # Add a new photo
 

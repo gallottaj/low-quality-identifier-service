@@ -1,4 +1,6 @@
-
+---
+layout: post
+---
 
 # Tutorial: Add a new user
 

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 ---
 
 # Tutorial: View photo quality checks
