@@ -12,7 +12,7 @@ This guide shows you how to interact with the low quality identifier service usi
 
 The quickstart guide shows you how to immediatly begin using this service to tag photos for cleanup.
 
-[Quickstart](#quickstart)
+[Quickstart](api/quickstart)
 
 ## Tutorials
 
@@ -20,7 +20,7 @@ Learn how to do common tasks within the low-quality image identifier service.
 
 Before you begin, you must follow the prerequisite tutorial below. You only have to do this one time per development system.
 
-* [Getting started](tutorials/before-you)
+* [Getting started](tutorials/before-you-start)
 
 After your system is ready, these tutorials show you how to perform common tasks.
 
