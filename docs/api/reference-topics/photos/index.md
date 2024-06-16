@@ -35,16 +35,16 @@ Sample `photo` resource
 
 | Property name | Type | Description |
 | ------------- | ----------- | ----------- |
-| `user_id` | string | The user's last name |
-| `file_name` | string | The user's first name |
-| `traits` | string | The user's email address |
-| `traits.blurriness` | number | The user's unique record ID |
-| `traits.faces` | number | The user's unique record ID |
-| `traits.subject_matter` | number | The user's unique record ID |
-| `traits.similarity_check` | number | The user's unique record ID |
-| `traits.rating` | number | The user's unique record ID |
-| `action.move_to` | number | The user's unique record ID |
-| `action.id` | number | The user's unique record ID |
+| `user_id` | string | The unique identifier of the user who owns the photo.  |
+| `file_name` | string | The name of the photo file. |
+| `traits` | string | The traits noted in the phoot. |
+| `traits.blurriness` | boolean | Indicates if the photo is blurry. |
+| `traits.faces` | boolean | Indicates if there are faces in the photo. |
+| `traits.subject_matter` | string | The subject of what's in the photo. |
+| `traits.similarity_check` | boolean | Indicates if the photo is similar to another photo. |
+| `traits.rating` | number | The rating of the traits in the photo. |
+| `action` | string | Indicates the actions to be taken based on the photo check. |
+| `action.id` | string | The unique identifier of the action. |
 
 
 <!-- ## Operations
