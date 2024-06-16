@@ -1,4 +1,5 @@
 theme: minima
 header_pages: 
   - docs/index.md
-minima: auto
+minima: 
+  skin: auto
