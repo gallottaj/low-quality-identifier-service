@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Home
 ---
 
 # Low quality identifier REST API
