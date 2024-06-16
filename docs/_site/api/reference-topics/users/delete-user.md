@@ -1,23 +1,21 @@
----
-layout: page
----
 
-# Show photo by id
 
-Returns a single photo resource.
+# Delete a user
+
+Use this operation to delete a user resource. You need to retrieve the user's id for this operation. Refer to [Read one user](/read-one-user.md) to get the user id.
 
 ## URL
 
 ```shell
 
-{GET} {base_url}/photos/{id}
+{DELETE} {base_url}/users/{id}
 ```
 
 ## Params
 
 | Parameter name | Type | Description |
 | -------------- | ------ | ------------ |
-| `id` | String | The unique identifier of the photo | 
+| `id` | String | The unique identifier of the user | 
 
 ## Request headers
 
@@ -39,18 +37,12 @@ The following example shows the response.
 
 ```js
 [
-  {
-    "file_name": "new_photo.jpg",
-    "traits": {
-        "blurriness": false,
-        "faces": false,
-        "subject_matter": "landscape",
-        "similarity_check": false,
-        "rating": 3
-    },
-    "action": "move_to:/archive",
-    "id": "aab5"
-  }
+    {
+      "last_name": "Doe",
+      "first_name": "John",
+      "email": "j.doe@example.com",
+      "id": 1
+    }
 ]
 ```
 

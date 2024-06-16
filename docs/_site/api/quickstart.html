@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/api/quickstart.html" />
+<meta property="og:url" content="http://localhost:4000/api/quickstart.html" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","url":"http://localhost:4000/api/quickstart.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/"></a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/api/reference-topics/users/">User resource</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline"></h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="" itemprop="datePublished">
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h1 id="quickstart-guide">Quickstart guide</h1>
+
+<p>The low-quality image identifier service provides a cloud-hosted photo gallery which allows you to identify low quality images to mark and sort them for cleanup.</p>
+
+<h2 id="at-a-glance">At a glance</h2>
+
+<p>This Quickstart provides all the information you need to begin using the low quality image identifier to sort photos for cleanup.</p>
+
+<p>You’ll learn when and how to use the web service and get set up to make your first call to the API.</p>
+
+<h2 id="setting-up-the-the-low-quality-image-identifier-service">Setting up the the low quality image identifier service</h2>
+
+<p>Photos will surface in the the low quality image identifier service when they are created in the database and assigned to users (by user {id}). If you’ve used the the low quality image identifier service previously, you’re already enrolled in the service and may have photos to work with.</p>
+
+<p>If not, you might need to set up your development system and get going from scratch. Don’t worry – you only have to do this one time per development system! Follow these <a href="../tutorials/before-you-start.md">prerequisite steps</a> to install the tools and test your development system.</p>
+
+<h2 id="when-to-use-the-the-low-quality-image-identifier-service">When to use the the low quality image identifier service</h2>
+
+<p>The the low quality image identifier service REST API offers a wide range of integration possibilities, from sorting photos in bulk for cleanup.</p>
+
+<p>The service comprises two resources: <a href="users"><code class="language-plaintext highlighter-rouge">users</code></a> and <a href="photos"><code class="language-plaintext highlighter-rouge">photos</code></a>. The <a href="users"><code class="language-plaintext highlighter-rouge">users</code></a> resource (containing the subscribers to the service) works in synergy with the <a href="photos"><code class="language-plaintext highlighter-rouge">photos</code></a> resource (containing the photoss) to align users with their the low quality image identifier list.</p>
+
+<p>Using this cloud-based service, customers can register themselves to create and manage their own photoss.
+When they’re registered, customers can update and delete photoss to suit their needs. Adding photoss on customers’ behalf is easy - if they’re collaborating with colleagues on different teams and projects, for example, they might be delegated requests and assigned photoss from different sources.</p>
+
+<h2 id="how-to-use-the-the-low-quality-image-identifier-service">How to use the the low quality image identifier service</h2>
+
+<p>To build your API call, you must have the following components:</p>
+
+<ul>
+  <li><strong>A host.</strong>  The {base_url} depends on users’ installation of the service in their development environment. For v1 of the low quality image identifier Service API, the <strong>base_url</strong> variable is typically set to <code class="language-plaintext highlighter-rouge">http://localhost:3000</code>.</li>
+  <li><strong>Authorization.</strong>  For v1 of the the low quality image identifier service, requests do not use any authorization. All endpoints are available to all users and applications.</li>
+  <li><strong>A request.</strong>  The the low quality image identifier service REST API enables CRUD operations via HTTP requests on database resources (<code class="language-plaintext highlighter-rouge">GET</code>, <code class="language-plaintext highlighter-rouge">POST</code>, <code class="language-plaintext highlighter-rouge">PUT</code>, <code class="language-plaintext highlighter-rouge">PATCH</code>, and <code class="language-plaintext highlighter-rouge">DELETE</code> methods). Request and response bodies are encoded as JSON.</li>
+</ul>
+
+<h3 id="supported-endpoints">Supported endpoints</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">HTTP Method</th>
+      <th style="text-align: center">Endpoint</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">GET</td>
+      <td style="text-align: center"><a href="users-get-user-by-id.md">List user by ID</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">GET</td>
+      <td style="text-align: center"><a href="users-get-user-by-email.md">List user by email</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">POST</td>
+      <td style="text-align: center"><a href="users-create-user.md">Create a user</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">PUT</td>
+      <td style="text-align: center"><a href="users-update-by-id.md">Update user by ID</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="make-your-first-api-call--get-user-id">Make your first API call – <em>Get user id</em></h2>
+
+<p>Assume that you’re already enrolled in the the low quality image identifier service and you want to list all photoss as a first call to the API.</p>
+
+<p>Let’s test making this simple request to the <a href="photos"><code class="language-plaintext highlighter-rouge">photos</code></a> resource.  You’ll use cURL to make the API call.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+curl http://localhost:3000/photos?user_id<span class="o">=</span>1
+</code></pre></div></div>
+
+<p>If the call was successful, the response you receive will be a list of photos from the the low quality image identifier service such as you see in this example:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+    <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="dl">"</span><span class="s2">user_id</span><span class="dl">"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">file_name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">vacation1.jpg</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">traits</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+                <span class="dl">"</span><span class="s2">blurriness</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">faces</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">subject_matter</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">landscape</span><span class="dl">"</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">similarity_check</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">rating</span><span class="dl">"</span><span class="p">:</span> <span class="mi">3</span>
+            <span class="p">},</span>
+            <span class="dl">"</span><span class="s2">action</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">move_to:/archive</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">id</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1</span><span class="dl">"</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="dl">"</span><span class="s2">user_id</span><span class="dl">"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">file_name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">party1.jpg</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">traits</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+                <span class="dl">"</span><span class="s2">blurriness</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">faces</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">subject_matter</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">party</span><span class="dl">"</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">similarity_check</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">rating</span><span class="dl">"</span><span class="p">:</span> <span class="mi">5</span>
+            <span class="p">},</span>
+            <span class="dl">"</span><span class="s2">action</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">keep</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">id</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">2</span><span class="dl">"</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+
+</code></pre></div></div>
+
+<hr />
+
+<p><strong>NOTE:</strong>
+cURL comes installed by default on Mac operating systems. If you need to, install it from <a href="https://curl.se/windows/">here</a>.</p>
+
+<hr />
+
+<h2 id="next-steps">Next steps</h2>
+
+<p>Now that you’ve everything set up correctly, you’re good to go and can take full advantage of the the low quality image identifier service API! Go ahead and start posting new photoss or enrolling new users. You’ll see how easy the API is to use.</p>
+
+<p>If you need more guidance, the Tutorials section of the API documentation walks through any photos you’ll want to do. The finer details of the supported resources, endpoints and properties are in the API reference section. For more information, go <a href="../index.md">here</a>.</p>
+
+  </div><a class="u-url" href="/api/quickstart.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading"></h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name"></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

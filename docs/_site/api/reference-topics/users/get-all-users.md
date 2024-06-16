@@ -1,58 +1,45 @@
----
-layout: page
----
 
-# Show photo by id
 
-Returns a single photo resource.
+# Get all users
+
+Returns all users of the service.
 
 ## URL
 
 ```shell
 
-{GET} {base_url}/photos/{id}
+{GET} {base_url}/users
 ```
 
-## Params
+<!-- ## Authorization -->
 
-| Parameter name | Type | Description |
-| -------------- | ------ | ------------ |
-| `id` | String | The unique identifier of the photo | 
 
 ## Request headers
-
-This request does not use any authorization. The endpoint is available to all tasks and applications.
 
 | Header name | Description | Required | Values |
 | -------------- | ------ | ------------ |------------ |
 | Content-Type | The format of the data to be posted. | Optional | application/json. Default value.  |
 | Accept | The format of the data to be returned. | Optional | application/json. Default value. |
 
-
-## Request body
-
-None
-
 ## Return body
 
 The following example shows the response. 
 
-```js
-[
-  {
-    "file_name": "new_photo.jpg",
-    "traits": {
-        "blurriness": false,
-        "faces": false,
-        "subject_matter": "landscape",
-        "similarity_check": false,
-        "rating": 3
-    },
-    "action": "move_to:/archive",
-    "id": "aab5"
-  }
-]
-```
+    ```js
+    [
+        {
+            "last_name": "Smith",
+            "first_name": "Ferdinand",
+            "email": "f.smith@example.com",
+            "id": 1
+        },
+        {
+            "last_name": "Jones",
+            "first_name": "Jill",
+            "email": "j.jones@example.com",
+            "id": 2
+        }
+    ```
 
 ## Return status
 

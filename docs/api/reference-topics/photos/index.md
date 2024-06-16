@@ -1,5 +1,8 @@
+---
+layout: page
+---
 
-# `photo` resource
+# Photo resource
 
 Base endpoint:
 

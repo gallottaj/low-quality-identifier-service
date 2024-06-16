@@ -1,5 +1,7 @@
-
-# `user` resource
+---
+layout: page
+title: User resource
+---
 
 Base endpoint:
 
@@ -13,7 +15,7 @@ To have photos in the service, the user must be added to the service first.
 
 ## Resource properties
 
-Sample `user` resource
+Sample `user` resource:
 
 ```js
 {
@@ -26,10 +28,10 @@ Sample `user` resource
 
 | Property name | Type | Description |
 | ------------- | ----------- | ----------- |
-| `last_name` | string | The user's last name |
-| `first_name` | string | The user's first name |
-| `email` | string | The user's email address |
-| `id` | number | The user's unique record ID |
+| `last_name` | string | The user's last name. |
+| `first_name` | string | The user's first name. |
+| `email` | string | The user's email address. |
+| `id` | string | The user's unique identifier. |
 
 ## Operations
 

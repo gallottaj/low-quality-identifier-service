@@ -1,16 +1,14 @@
----
-layout: page
----
 
-# Show photo by id
 
-Returns a single photo resource.
+# Delete a photo
+
+Use this operation to delete a photo resource. You need to retrieve the photo's id for this operation. Refer to [Show one photo](/show-one-photo.md) to get the photo id.
 
 ## URL
 
 ```shell
 
-{GET} {base_url}/photos/{id}
+{DELETE} {base_url}/photos/{id}
 ```
 
 ## Params

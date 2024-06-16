@@ -1,4 +1,6 @@
-
+---
+layout: home
+---
 
 # Low quality identifier service API
 
@@ -10,7 +12,7 @@ This guide shows you how to interact with the low quality identifier service usi
 
 The quickstart guide shows you how to immediatly begin using this service to tag photos for cleanup.
 
-[Quickstart](api/quickstart)
+[Quickstart](#quickstart)
 
 ## Tutorials
 

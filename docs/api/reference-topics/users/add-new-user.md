@@ -1,4 +1,6 @@
-
+---
+layout: page
+---
 
 # Add a new user
 

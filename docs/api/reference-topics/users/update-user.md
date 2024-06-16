@@ -1,4 +1,6 @@
-
+---
+layout: page
+---
 
 # Update a user
 

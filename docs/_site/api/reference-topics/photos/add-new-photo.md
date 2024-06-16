@@ -1,16 +1,14 @@
----
-layout: page
----
+
 
 # Add a new photo
 
-Use this operation to update an existing photo resource.
+Use this operation to create a new photo resource.
 
 ## URL
 
 ```shell
 
-{PUT} {base_url}/photos/{id}
+{POST} {base_url}/photos
 ```
 
 ## Params

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/tutorials/add-a-new-photo-tutorial.html" />
+<meta property="og:url" content="http://localhost:4000/tutorials/add-a-new-photo-tutorial.html" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","url":"http://localhost:4000/tutorials/add-a-new-photo-tutorial.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/"></a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/api/reference-topics/users/">User resource</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title"></h1>
+  </header>
+
+  <div class="post-content">
+    <h1 id="tutorial-add-a-new-photo">Tutorial: Add a new photo</h1>
+
+<p>In this tutorial, you learn the operations needed to
+add a new photo.</p>
+
+<p>Expect this tutorial to take about 15 minutes to complete.</p>
+
+<h2 id="before-you-start">Before you start</h2>
+
+<p>Make sure you’ve completed the <a href="before-you-start-a-tutorial">Before you start a tutorial</a> topic on the development system you’ll use for the tutorial.</p>
+
+<h2 id="add-a-new-photo">Add a new photo</h2>
+
+<p>Adding a new photo to the service requires that you add (<code class="language-plaintext highlighter-rouge">POST</code>) the details of a new <a href="../api/photo"><code class="language-plaintext highlighter-rouge">photo</code></a> resource to the service.</p>
+
+<p>To add a new photo:</p>
+
+<ol>
+  <li>
+    <p>Make sure your local service is running, or start it by using this command, if it’s not.</p>
+
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">cd</span> &lt;your-github-workspace&gt;/low-quality-identifier-service/api
+ json-server <span class="nt">-w</span> low-quality-identifier-service-source.json
+</code></pre></div>    </div>
+  </li>
+  <li>Open the Postman app on your desktop.</li>
+  <li>
+    <p>In the Postman app, create a new request with these values:</p>
+
+    <ul>
+      <li><strong>Method</strong>: POST</li>
+      <li><strong>Authorization</strong>: Basic Auth (<code class="language-plaintext highlighter-rouge">username</code>/<code class="language-plaintext highlighter-rouge">password</code>)</li>
+      <li><strong>URL</strong>: <code class="language-plaintext highlighter-rouge">{base_url}/photos</code></li>
+      <li><strong>Headers</strong>:<code class="language-plaintext highlighter-rouge">Content-Type: application/json</code></li>
+      <li><strong>Request body</strong>:</li>
+    </ul>
+
+    <p>You can change the values of each property as you’d like.</p>
+
+    <p><code class="language-plaintext highlighter-rouge">js
+ [
+ {
+     "id": "aab5",
+     "file_name": "new_photo.jpg",
+     "traits": {
+         "blurriness": true,
+         "faces": true,
+         "subject_matter": "landscape",
+         "similarity_check": false,
+         "rating": 3
+     },
+     "action": "move_to:/archive"
+ }
+ ]
+    </code></p>
+  </li>
+  <li>In the Postman app, choose <strong>Send</strong> to make the request.</li>
+  <li>
+    <p>Watch for the response body, which should look something like this. Note that the names should be the same as you used in your <strong>Request body</strong> and the response should include the new photo’s <code class="language-plaintext highlighter-rouge">id</code>.</p>
+
+    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="p">[</span>
+ <span class="p">{</span>
+     <span class="dl">"</span><span class="s2">id</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">aab5</span><span class="dl">"</span><span class="p">,</span>
+     <span class="dl">"</span><span class="s2">file_name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">new_photo.jpg</span><span class="dl">"</span><span class="p">,</span>
+     <span class="dl">"</span><span class="s2">traits</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+         <span class="dl">"</span><span class="s2">blurriness</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+         <span class="dl">"</span><span class="s2">faces</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+         <span class="dl">"</span><span class="s2">subject_matter</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">landscape</span><span class="dl">"</span><span class="p">,</span>
+         <span class="dl">"</span><span class="s2">similarity_check</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+         <span class="dl">"</span><span class="s2">rating</span><span class="dl">"</span><span class="p">:</span> <span class="mi">3</span>
+     <span class="p">},</span>
+     <span class="dl">"</span><span class="s2">action</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">move_to:/archive</span><span class="dl">"</span>
+ <span class="p">}</span>
+ <span class="p">]</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>After doing this tutorial in Postman, you might like to repeat it in
+your favorite programming language. To do this, adapt the values from
+the tutorial to the properties and arguments that the language uses to
+make REST API calls.</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading"></h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name"></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

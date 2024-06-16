@@ -1,4 +1,6 @@
-
+---
+layout: page
+---
 
 # Tutorial: View photo quality checks
 
