@@ -18,7 +18,7 @@ To add photos, the user must be added to the service first.
 
 Sample `photo` resource
 
-```js
+```json
 {
     "user_id": 1,
     "file_name": "vacation1.jpg",

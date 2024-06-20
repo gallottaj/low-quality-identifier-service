@@ -35,7 +35,7 @@ This request does not use any authorization. The endpoint is available to all ta
 
 ## Request body
 
-```js
+```json
 [
     {
       "last_name": "Doe",
@@ -49,7 +49,7 @@ This request does not use any authorization. The endpoint is available to all ta
 
 The following example shows the response. 
 
-```js
+```json
 [
     {
       "last_name": "Doe",

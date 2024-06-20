@@ -36,7 +36,7 @@ To add a new user:
     * **Request body**:
         You can change the values of each property as you'd like.
 
-        ```js
+        ```json
         [
             {
             "last_name": "Doe",
@@ -49,7 +49,7 @@ To add a new user:
 1. In the Postman app, choose **Send** to make the request.
 1. Watch for the response body, which should look something like this. Note that the names should be the same as you used in your **Request body** and the response should include the new user's `id`.
 
-    ```js
+    ```json
     [
         {
         "last_name": "Doe",

@@ -53,7 +53,7 @@ curl http://localhost:3000/photos?user_id=1
 
 If the call was successful, the response you receive will be a list of photos from the the low quality identifier service such as you see in this example:
 
-```js
+```json
 
     [
         {

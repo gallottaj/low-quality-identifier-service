@@ -37,7 +37,7 @@ None
 
 The following example shows the response. 
 
-```js
+```json
 [
     {
       "last_name": "Doe",

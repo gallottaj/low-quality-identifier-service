@@ -37,7 +37,7 @@ To add a new photo:
         
     You can change the values of each property as you'd like.
 
-    ```js
+    ```json
     [
     {
         "id": "aab5",
@@ -57,7 +57,7 @@ To add a new photo:
 1. In the Postman app, choose **Send** to make the request.
 1. Watch for the response body, which should look something like this. Note that the names should be the same as you used in your **Request body** and the response should include the new photo's `id`.
 
-    ```js
+    ```json
     [
     {
         "id": "aab5",

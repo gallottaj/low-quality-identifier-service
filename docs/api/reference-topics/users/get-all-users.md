@@ -27,7 +27,7 @@ Returns all users of the service.
 
 The following example shows the response. 
 
-    ```js
+    ```json
     [
         {
             "last_name": "Smith",

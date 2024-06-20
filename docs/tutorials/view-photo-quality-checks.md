@@ -36,7 +36,7 @@ To retrieve a user id:
 1. In the Postman app, choose **Send** to make the request.
 1. Watch for the response body, which should look something like this. Note that the names should be the same as you used in your **Request body** and the response should include the user's `id`. You will need this `id` value in the next step.
 
-    ```js
+    ```json
     [
         {
             "last_name": "Doe",
@@ -70,7 +70,7 @@ To retrieve a user id:
 
 Note the `trait` and `action` values to understand the undesirable traits that have been detected and how to handle the photo.
 
-    ```js
+    ```jsonon
     [
         {
             "user_id": 1,

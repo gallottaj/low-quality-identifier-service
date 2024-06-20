@@ -37,7 +37,7 @@ This request does not use any authorization. The endpoint is available to all ta
 
 ## Request body
 
-```js
+```json
 [
     {
       "file_name": "new_photo.jpg",
@@ -57,7 +57,7 @@ This request does not use any authorization. The endpoint is available to all ta
 
 The following example shows the response. 
 
-```js
+```json
 [
   {
     "id": "aab5",

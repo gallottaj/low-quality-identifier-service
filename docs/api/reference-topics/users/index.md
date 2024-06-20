@@ -16,7 +16,7 @@ To have photos in the service, the user must be added to the service first.
 
 Sample `user` resource:
 
-```js
+```json
 {
     "last_name": "Smith",
     "first_name": "Ferdinand",
