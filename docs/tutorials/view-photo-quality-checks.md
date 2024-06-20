@@ -6,6 +6,10 @@ layout: post
 
 In this tutorial, you'll learn the operations needed to view the photo quality check results. The photo quality check results include the `traits`, which are the undesireable traits detected in the photo, and an `action` which indicates how to handle the photo.
 
+You can use this Postman collection to follow along:
+
+[<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 128px; height: 32px;">](https://app.getpostman.com/run-collection/34259223-ac2df178-7ba5-491f-b860-332ba64f1187?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D34259223-ac2df178-7ba5-491f-b860-332ba64f1187%26entityType%3Dcollection%26workspaceId%3D1f7c6ff2-8124-4e67-a6cc-1768a9ae3315)
+
 Expect this tutorial to take about 15 minutes to complete.
 
 ## Before you start
@@ -46,7 +50,8 @@ To retrieve a user id:
         }
     ]
     ```
-## Retreive a photo to see its traits
+    
+## Retreive photo
 
 1. Make sure your local service is running, or start it by using this command, if it's not.
 
@@ -55,8 +60,8 @@ To retrieve a user id:
     json-server -w low-quality-identifier-service-source.json
     ```
 
-1. Open the Postman app on your desktop.
-1. In the Postman app, create a new request with these values:
+2. Open the Postman app on your desktop.
+3. In the Postman app, create a new request with these values:
 
     * **Method**: Get
     * **Authorization**: Basic Auth (`username`/`password`)
@@ -65,12 +70,10 @@ To retrieve a user id:
     * **Parameters**: `user_id`
     Enter the user's id in the parameter value.
 
-1. In the Postman app, choose **Send** to make the request.
-1. Watch for the response body, which should look something like this. The response body will show all photos that belong to the user. 
+4. In the Postman app, choose **Send** to make the request.
+5. Watch for the response body, which should look something like this. The response body will show all photos that belong to the user. **Note** the `trait` and `action` values to understand the undesirable traits that have been detected and how to handle the photo.
 
-Note the `trait` and `action` values to understand the undesirable traits that have been detected and how to handle the photo.
-
-    ```jsonon
+    ```json
     [
         {
             "user_id": 1,

@@ -44,6 +44,10 @@
 
 <p>In this tutorial, you’ll learn the operations needed to view the photo quality check results. The photo quality check results include the <code class="language-plaintext highlighter-rouge">traits</code>, which are the undesireable traits detected in the photo, and an <code class="language-plaintext highlighter-rouge">action</code> which indicates how to handle the photo.</p>
 
+<p>You can use this Postman collection to follow along:</p>
+
+<p><a href="https://app.getpostman.com/run-collection/34259223-ac2df178-7ba5-491f-b860-332ba64f1187?action=collection%2Ffork&amp;source=rip_markdown&amp;collection-url=entityId%3D34259223-ac2df178-7ba5-491f-b860-332ba64f1187%26entityType%3Dcollection%26workspaceId%3D1f7c6ff2-8124-4e67-a6cc-1768a9ae3315"><img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 128px; height: 32px;" /></a></p>
+
 <p>Expect this tutorial to take about 15 minutes to complete.</p>
 
 <h2 id="before-you-start">Before you start</h2>
@@ -78,17 +82,21 @@
   <li>
     <p>Watch for the response body, which should look something like this. Note that the names should be the same as you used in your <strong>Request body</strong> and the response should include the user’s <code class="language-plaintext highlighter-rouge">id</code>. You will need this <code class="language-plaintext highlighter-rouge">id</code> value in the next step.</p>
 
-    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="p">[</span>
-     <span class="p">{</span>
-         <span class="dl">"</span><span class="s2">last_name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Doe</span><span class="dl">"</span><span class="p">,</span>
-         <span class="dl">"</span><span class="s2">first_name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">John</span><span class="dl">"</span><span class="p">,</span>
-         <span class="dl">"</span><span class="s2">email</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">j.doe@example.com</span><span class="dl">"</span><span class="p">,</span>
-         <span class="dl">"</span><span class="s2">id</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1</span><span class="dl">"</span>
-     <span class="p">}</span>
- <span class="p">]</span>
-</code></pre></div>    </div>
-    <h2 id="retreive-a-photo-to-see-its-traits">Retreive a photo to see its traits</h2>
+    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w"> </span><span class="p">[</span><span class="w">
+     </span><span class="p">{</span><span class="w">
+         </span><span class="nl">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Doe"</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"John"</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"j.doe@example.com"</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="w">
+     </span><span class="p">}</span><span class="w">
+ </span><span class="p">]</span><span class="w">
+</span></code></pre></div>    </div>
   </li>
+</ol>
+
+<h2 id="retreive-photo">Retreive photo</h2>
+
+<ol>
   <li>
     <p>Make sure your local service is running, or start it by using this command, if it’s not.</p>
 
@@ -110,29 +118,27 @@
     </ul>
   </li>
   <li>In the Postman app, choose <strong>Send</strong> to make the request.</li>
-  <li>Watch for the response body, which should look something like this. The response body will show all photos that belong to the user.</li>
+  <li>
+    <p>Watch for the response body, which should look something like this. The response body will show all photos that belong to the user. <strong>Note</strong> the <code class="language-plaintext highlighter-rouge">trait</code> and <code class="language-plaintext highlighter-rouge">action</code> values to understand the undesirable traits that have been detected and how to handle the photo.</p>
+
+    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w"> </span><span class="p">[</span><span class="w">
+     </span><span class="p">{</span><span class="w">
+         </span><span class="nl">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"file_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vacation1.jpg"</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"traits"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+             </span><span class="nl">"blurriness"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+             </span><span class="nl">"faces"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+             </span><span class="nl">"subject_matter"</span><span class="p">:</span><span class="w"> </span><span class="s2">"landscape"</span><span class="p">,</span><span class="w">
+             </span><span class="nl">"similarity_check"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+             </span><span class="nl">"rating"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w">
+         </span><span class="p">},</span><span class="w">
+         </span><span class="nl">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"move_to:/archive"</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="w">
+     </span><span class="p">}</span><span class="w">
+ </span><span class="p">]</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
 </ol>
-
-<p>Note the <code class="language-plaintext highlighter-rouge">trait</code> and <code class="language-plaintext highlighter-rouge">action</code> values to understand the undesirable traits that have been detected and how to handle the photo.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```json
-[
-    {
-        "user_id": 1,
-        "file_name": "vacation1.jpg",
-        "traits": {
-            "blurriness": true,
-            "faces": true,
-            "subject_matter": "landscape",
-            "similarity_check": false,
-            "rating": 3
-        },
-        "action": "move_to:/archive",
-        "id": "1"
-    }
-]
-```
-</code></pre></div></div>
 
   </div><a class="u-url" href="/tutorials/view-photo-quality-checks.html" hidden></a>
 </article>
