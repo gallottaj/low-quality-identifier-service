@@ -84,19 +84,6 @@ Note the `trait` and `action` values to understand the undesirable traits that h
             },
             "action": "move_to:/archive",
             "id": "1"
-        },
-        {
-            "user_id": 1,
-            "file_name": "party1.jpg",
-            "traits": {
-                "blurriness": false,
-                "faces": true,
-                "subject_matter": "party",
-                "similarity_check": true,
-                "rating": 5
-            },
-            "action": "keep",
-            "id": "2"
         }
     ]
     ```

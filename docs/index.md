@@ -4,7 +4,9 @@ layout: page
 
 # Low quality identifier REST API
 
-The low quality identifier service provides a cloud hosted photo gallery that allows you to search large quantities of photos for undesireable traits, such as blurriness, subject matter or similarity. Each photo goes through a quality check that determines the photo's `traits`, which are the undesireable traits detected in the photo, and an `action` which indicates what to do with the photo.
+The low quality identifier service provides a cloud hosted photo gallery that allows you to search large quantities of photos for undesireable traits, such as blurriness, subject matter or similarity. 
+
+Each photo goes through a quality check that determines the photo's `traits`, which are the undesireable traits detected in the photo, and an `action` which indicates what to do with the photo.
 
 This guide shows you how to interact with the low quality identifier service using the REST API.
 
