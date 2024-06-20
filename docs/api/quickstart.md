@@ -2,13 +2,9 @@
 layout: post
 ---
 
-# Quickstart guide
+# At a glance
 
-The low-quality identifier service provides a cloud-hosted photo gallery which allows you to identify low quality images to mark and sort them for cleanup. 
-
-## At a glance
-
-This Quickstart provides all the information you need to begin using the low quality identifier to sort photos for cleanup.
+This quickstart provides all the information you need to begin using the low quality identifier service to sort photos for cleanup.
 
 You’ll learn when and how to use the web service and get set up to make your first call to the API.
 

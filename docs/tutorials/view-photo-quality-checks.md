@@ -2,9 +2,9 @@
 layout: post
 ---
 
-# Tutorial: View photo quality checks
+# Tutorial: View photo quality check
 
-In this tutorial, you learn the operations needed to view the results of a photo check.
+In this tutorial, you'll learn the operations needed to view the photo quality check results. The photo quality check results include the `traits`, which are the undesireable traits detected in the photo, and an `action` which indicates how to handle the photo.
 
 Expect this tutorial to take about 15 minutes to complete.
 
@@ -14,9 +14,9 @@ Make sure you've completed the [Before you start a tutorial](before-you-start-a-
 
 ## Retreive user id
 
-Viewing the results of a photo quality check requires knowing your user id.
+Viewing a specific photo requires knowing the user's id.
 
-To retrieve your user id:
+To retrieve a user id:
 
 1. Make sure your local service is running, or start it by using this command, if it's not.
 
@@ -46,11 +46,7 @@ To retrieve your user id:
         }
     ]
     ```
-## See details of photos
-
-Viewing the results of all photo quality checks requires knowing the photo's id.
-
-To retrieve the photos:
+## Retreive a photo to see its traits
 
 1. Make sure your local service is running, or start it by using this command, if it's not.
 
@@ -72,7 +68,7 @@ To retrieve the photos:
 1. In the Postman app, choose **Send** to make the request.
 1. Watch for the response body, which should look something like this. The response body will show all photos that belong to the user. 
 
-Note the `trait` and `action` values to understand the results of the photo quality check.
+Note the `trait` and `action` values to understand the undesirable traits that have been detected and how to handle the photo.
 
     ```js
     [

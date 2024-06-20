@@ -40,9 +40,9 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <h1 id="tutorial-view-photo-quality-checks">Tutorial: View photo quality checks</h1>
+    <h1 id="tutorial-view-photo-quality-check">Tutorial: View photo quality check</h1>
 
-<p>In this tutorial, you learn the operations needed to view the results of a photo check.</p>
+<p>In this tutorial, you’ll learn the operations needed to view the photo quality check results. The photo quality check results include the <code class="language-plaintext highlighter-rouge">traits</code>, which are the undesireable traits detected in the photo, and an <code class="language-plaintext highlighter-rouge">action</code> which indicates how to handle the photo.</p>
 
 <p>Expect this tutorial to take about 15 minutes to complete.</p>
 
@@ -52,9 +52,9 @@
 
 <h2 id="retreive-user-id">Retreive user id</h2>
 
-<p>Viewing the results of a photo quality check requires knowing your user id.</p>
+<p>Viewing a specific photo requires knowing the user’s id.</p>
 
-<p>To retrieve your user id:</p>
+<p>To retrieve a user id:</p>
 
 <ol>
   <li>
@@ -87,15 +87,8 @@
      <span class="p">}</span>
  <span class="p">]</span>
 </code></pre></div>    </div>
-    <h2 id="see-details-of-photos">See details of photos</h2>
+    <h2 id="retreive-a-photo-to-see-its-traits">Retreive a photo to see its traits</h2>
   </li>
-</ol>
-
-<p>Viewing the results of all photo quality checks requires knowing the photo’s id.</p>
-
-<p>To retrieve the photos:</p>
-
-<ol>
   <li>
     <p>Make sure your local service is running, or start it by using this command, if it’s not.</p>
 
@@ -120,7 +113,7 @@
   <li>Watch for the response body, which should look something like this. The response body will show all photos that belong to the user.</li>
 </ol>
 
-<p>Note the <code class="language-plaintext highlighter-rouge">trait</code> and <code class="language-plaintext highlighter-rouge">action</code> values to understand the results of the photo quality check.</p>
+<p>Note the <code class="language-plaintext highlighter-rouge">trait</code> and <code class="language-plaintext highlighter-rouge">action</code> values to understand the undesirable traits that have been detected and how to handle the photo.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```js
 [
